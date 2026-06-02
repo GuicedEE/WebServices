@@ -1,52 +1,61 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                      https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>parent</artifactId>
-        <version>2.1.0-SNAPSHOT</version>
+        <version>2.1.1-SNAPSHOT</version>
     </parent>
-
     <groupId>com.guicedee</groupId>
     <artifactId>web-services</artifactId>
     <packaging>jar</packaging>
-    <version>2.1.0-SNAPSHOT</version>
-
+    <version>2.1.1-SNAPSHOT</version>
     <name>Guiced Web Services</name>
     <description>An integration library for Apache CXF SOAP web services on Vert.x inside the GuicedEE framework
     </description>
-
+    <url>https://guicedee.com</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/GuicedEE/WebServices</url>
+        <connection>scm:git:https://github.com/GuicedEE/WebServices.git</connection>
+        <developerConnection>scm:git:https://github.com/GuicedEE/WebServices.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <id>GedMarc</id>
+            <name>Marc Magon</name>
+            <email>marc.magon@gmail.com</email>
+            <url>https://github.com/GedMarc</url>
+        </developer>
+    </developers>
     <properties>
         <project.scm.nameUrl>/GuicedEE/GuicedWebServices</project.scm.nameUrl>
         <ignore.moditect>true</ignore.moditect>
         <flatten.pom>true</flatten.pom>
     </properties>
-
     <dependencies>
-
         <dependency>
             <groupId>com.guicedee</groupId>
             <artifactId>web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.guicedee</groupId>
             <artifactId>client</artifactId>
         </dependency>
-
-
         <dependency>
             <groupId>com.guicedee.modules.services</groupId>
             <artifactId>org.apache.cxf</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -57,38 +66,30 @@
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>com.guicedee</groupId>
             <artifactId>inject</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.moditect</groupId>
                 <artifactId>moditect-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>com.coderplus.maven.plugins</groupId>
                 <artifactId>copy-rename-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -100,7 +101,6 @@
             </plugin>
         </plugins>
     </build>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -147,5 +147,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>
