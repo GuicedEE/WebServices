@@ -14,6 +14,6 @@ module com.guicedee.webservices.test {
 
     exports com.guicedee.webservices.test;
 
-    opens com.guicedee.webservices.test to org.junit.platform.commons, com.google.guice, com.fasterxml.jackson.databind, io.github.classgraph, org.apache.cxf;
+    opens com.guicedee.webservices.test to org.junit.platform.commons, com.google.guice, tools.jackson.databind, io.github.classgraph, org.apache.cxf;
 }
 
