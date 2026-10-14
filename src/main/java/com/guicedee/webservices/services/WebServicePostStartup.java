@@ -1,5 +1,7 @@
 package com.guicedee.webservices.services;
 
+import com.guicedee.client.utils.ClassLoading;
+
 import com.guicedee.client.IGuiceContext;
 import com.guicedee.client.services.lifecycle.IGuicePostStartup;
 import com.guicedee.webservices.WSContext;
@@ -68,7 +70,7 @@ public class WebServicePostStartup implements IGuicePostStartup<WebServicePostSt
                 continue;
             }
 
-            Class<?> endpointClass = classInfo.loadClass();
+            Class<?> endpointClass = ClassLoading.loadClass(classInfo);
             WebService annotation = endpointClass.getAnnotation(WebService.class);
             if (annotation == null) {
                 continue;
